@@ -1,0 +1,9 @@
+---
+services:
+  test:
+    image: bash:latest
+    volumes:
+      - ./test.txt:/test/test.txt
+      - ./:/test2
+    command: bash -c "set -x; ls -la /test; ls -la /test/test.txt; cat /test2/test.txt /test/test.txt"
+    
